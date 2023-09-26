@@ -1660,7 +1660,7 @@ iframe {
   border-radius: inherit;
 }
 .range-slider > input {
-  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: var(--thumb-size);
   margin: 0;
@@ -4837,6 +4837,10 @@ iframe {
 
   .reviews .swiper-button-next {
     right: -5px;
+  }
+
+  .logo img {
+    height: 28px;
   }
 }
 
