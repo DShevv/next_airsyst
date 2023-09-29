@@ -41,7 +41,7 @@
   );
   border-radius: 0 0 5px 5px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
 }
 
@@ -441,7 +441,7 @@ body {
   );
   border-radius: 0 0 5px 5px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
   margin-bottom: 0;
   padding-bottom: 15px;
@@ -610,6 +610,7 @@ body {
 .footer .mail img {
   width: 27px;
   margin-right: 13px;
+  height: auto;
 }
 .footer .contacts {
   margin-bottom: 30px;
@@ -4827,6 +4828,10 @@ iframe {
   padding: 0 25px !important;
   margin-top: 50px;
   margin-bottom: 110px;
+}
+
+.dealers__content ul {
+  padding-inline-start: 40px;
 }
 
 @media screen and (max-width: 1024px) {
