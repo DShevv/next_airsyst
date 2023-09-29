@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer__item">
           <Link href={"/"} className="logo">
-            <Image src={logo} width={170} height={38} />
+            <Image src={logo} width={170} height={38} alt="Logo" />
           </Link>
           <div className="copyright">© 2015-2023</div>
         </div>

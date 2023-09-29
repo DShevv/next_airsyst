@@ -21,3 +21,10 @@
 .container {
   margin-top: 35px;
 }
+
+@media (max-width: 640px) {
+  .current,
+  .link {
+    font-size: 3.5vw;
+  }
+}

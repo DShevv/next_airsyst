@@ -30,7 +30,7 @@ export default function NavBar() {
             <Link className="nav__item" href={"/about"}>
               О компании
             </Link>
-            <Link className="nav__item" href={"/proekty"}>
+            <Link className="nav__item" href={"/projects"}>
               Наши проекты
             </Link>
             <Link className="nav__item" href={"/sertifikaty"}>
