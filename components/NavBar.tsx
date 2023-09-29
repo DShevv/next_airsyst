@@ -36,10 +36,10 @@ export default function NavBar() {
             <Link className="nav__item" href={"/sertifikaty"}>
               Сертификаты
             </Link>
-            <Link className="nav__item" href={"/kontakty"}>
+            <Link className="nav__item" href={"/contacts"}>
               Контакты
             </Link>
-            <Link className="nav__item" href={"/dileram"}>
+            <Link className="nav__item" href={"/diallers"}>
               Дилерам
             </Link>
           </div>

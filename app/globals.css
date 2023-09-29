@@ -588,7 +588,7 @@ body {
 .footer {
   background: #eff4ff;
   padding: 75px 0 60px;
-  margin-top: 110px;
+  margin-top: 50px;
 }
 .footer .wrap {
   display: flex;
@@ -4787,7 +4787,7 @@ iframe {
   position: relative;
   transform: scale(0.9) !important;
   background: #f6f7fc;
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 10px;
   box-shadow: 0px 0px 0px 17px #f6f7fc;
   transition: all 0.3s ease;
@@ -4814,9 +4814,19 @@ iframe {
   font-size: 16px;
 }
 
+.cerf .swiper-button-prev {
+  left: -2px;
+}
+
+.cerf .swiper-button-next {
+  right: -2px;
+}
+
 .certificate-swiper {
   overflow-y: visible !important;
   padding: 0 25px !important;
+  margin-top: 50px;
+  margin-bottom: 110px;
 }
 
 @media screen and (max-width: 1024px) {

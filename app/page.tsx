@@ -11,7 +11,10 @@ export default function Home() {
         </h1>
         <MainSlider />
         <Products />
-        <SertifikatesSlider />
+        <section className="reviews wrap">
+          <h2 className="title">Сертификаты</h2>
+          <SertifikatesSlider />
+        </section>
       </section>
     </main>
   );

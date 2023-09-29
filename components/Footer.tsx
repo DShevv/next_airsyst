@@ -17,19 +17,19 @@ export default function Footer() {
           <div className="copyright">© 2015-2023</div>
         </div>
         <div className="footer__item">
-          <Link className="nav__item" href={"/o-nas"}>
+          <Link className="nav__item" href={"/about"}>
             О компании
           </Link>
-          <Link className="nav__item" href={"/proekty"}>
+          <Link className="nav__item" href={"/projects"}>
             Наши проекты
           </Link>
           <Link className="nav__item" href={"/sertifikaty"}>
             Сертификаты
           </Link>
-          <Link className="nav__item" href={"/kontakty"}>
+          <Link className="nav__item" href={"/contacts"}>
             Контакты
           </Link>
-          <Link className="nav__item" href={"/dileram"}>
+          <Link className="nav__item" href={"/diallers"}>
             Дилерам
           </Link>
         </div>
