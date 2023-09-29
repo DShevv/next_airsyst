@@ -1,0 +1,17 @@
+.customSelect::before {
+  content: "";
+  background-image: url(../../public/img/icons/arrow-down.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 14.5px;
+  height: 21.5px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.active .customSelect::before {
+  transform: translateY(-50%) rotate(180deg);
+}
