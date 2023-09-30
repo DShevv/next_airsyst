@@ -233,10 +233,10 @@ body {
   width: 170px;
 }
 .nav__items {
-  width: 680px;
   display: flex;
   justify-content: space-between;
   margin-right: 52px;
+  gap: 20px;
 }
 .nav__item {
   font-weight: 400;
@@ -308,6 +308,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   height: 90%;
+  width: auto;
   max-width: 42%;
   -o-object-fit: contain;
   object-fit: contain;

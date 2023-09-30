@@ -27,8 +27,14 @@ export default function NavBar() {
             />
           </a>
           <div className="nav__items">
+            <Link className="nav__item" href={"/products"}>
+              Наши продукты
+            </Link>
             <Link className="nav__item" href={"/about"}>
               О компании
+            </Link>
+            <Link className="nav__item" href={"/news"}>
+              Новости
             </Link>
             <Link className="nav__item" href={"/projects"}>
               Наши проекты
@@ -75,8 +81,14 @@ export default function NavBar() {
       </nav>
       <div className={`nav-mobile mobile ${isOpened && "active"}`}>
         <div className="nav__items">
+          <Link className="nav__item" href={"/products"}>
+            Наши продукты
+          </Link>
           <Link className="nav__item" href={"/about"}>
             О компании
+          </Link>
+          <Link className="nav__item" href={"/news"}>
+            Новости
           </Link>
           <Link className="nav__item" href={"/proekty"}>
             Наши проекты
@@ -84,10 +96,10 @@ export default function NavBar() {
           <Link className="nav__item" href={"/sertifikaty"}>
             Сертификаты
           </Link>
-          <Link className="nav__item" href={"/kontakty"}>
+          <Link className="nav__item" href={"/contacts"}>
             Контакты
           </Link>
-          <Link className="nav__item" href={"/dileram"}>
+          <Link className="nav__item" href={"/diallers"}>
             Дилерам
           </Link>
         </div>

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import "../app/globals.css";
 import logo from "../public/img/images/airsyst.svg";
 import Image from "next/image";
 import WorkTime from "./WorkTime";
@@ -17,8 +16,14 @@ export default function Footer() {
           <div className="copyright">© 2015-2023</div>
         </div>
         <div className="footer__item">
+          <Link className="nav__item" href={"/products"}>
+            Наши продукты
+          </Link>
           <Link className="nav__item" href={"/about"}>
             О компании
+          </Link>
+          <Link className="nav__item" href={"/news"}>
+            Новости
           </Link>
           <Link className="nav__item" href={"/projects"}>
             Наши проекты

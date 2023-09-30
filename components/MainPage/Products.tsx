@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ProductItem from "./ProductItem";
 import obrImage from "../../public/img/images/main-eq.png";
 import airsyst from "../../public/img/images/airsyst.svg";

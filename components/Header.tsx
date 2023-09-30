@@ -1,5 +1,3 @@
-import "../app/globals.css";
-
 import Contacts from "./Contacts";
 import Email from "./Email";
 import WorkTime from "./WorkTime";

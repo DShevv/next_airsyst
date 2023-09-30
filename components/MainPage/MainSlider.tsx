@@ -32,7 +32,7 @@ export default function MainSlider() {
           <a href="{{slider.link}}" className="btn">
             Узнать больше
           </a>
-          <Image src={testPic} alt="" />
+          <Image src={testPic} alt="" width={260} height={350} />
         </SwiperSlide>
         <SwiperSlide className="hero-slide swiper-slide">
           <h2 className="title">Воздуходувки</h2>
@@ -44,7 +44,7 @@ export default function MainSlider() {
           <a href="{{slider.link}}" className="btn">
             Узнать больше
           </a>
-          <Image src={testPic} alt="" />
+          <Image src={testPic} alt="" width={260} height={350} />
         </SwiperSlide>
         <SwiperSlide className="hero-slide swiper-slide">
           <h2 className="title">Воздуходувки</h2>
@@ -56,7 +56,7 @@ export default function MainSlider() {
           <a href="{{slider.link}}" className="btn">
             Узнать больше
           </a>
-          <Image src={testPic} alt="" />
+          <Image src={testPic} alt="" width={260} height={350} />
         </SwiperSlide>
         <SwiperSlide className="hero-slide swiper-slide">
           <h2 className="title">Воздуходувки</h2>
@@ -68,7 +68,7 @@ export default function MainSlider() {
           <a href="{{slider.link}}" className="btn">
             Узнать больше
           </a>
-          <Image src={testPic} alt="" />
+          <Image src={testPic} alt="" width={490} height={444} />
         </SwiperSlide>
       </Swiper>
     </>

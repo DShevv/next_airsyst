@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import testPic from "../public/img/images/certificates.jpg";
 import Image from "next/image";
 
