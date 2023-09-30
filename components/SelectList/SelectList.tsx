@@ -10,7 +10,6 @@ import {
 } from "react";
 import styles from "./SelectList.module.css";
 import useOutsideRef from "@/hooks/useOutsideRef";
-import { log } from "console";
 
 interface Props {
   options: { name: string; link: string }[];
@@ -20,7 +19,7 @@ export default function SelectList({ options }: Props) {
   const wrapperRef = useRef(null);
   useOutsideRef(wrapperRef, handelClickOutside);
   const [isActive, setIsActive] = useState(false);
-  const [selected, setSelected] = useState("Все проекты");
+  const [selected, setSelected] = useState(options[0].name);
 
   function handelClickOutside() {
     setIsActive(false);
