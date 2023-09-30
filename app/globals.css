@@ -1245,9 +1245,9 @@ iframe {
 }
 .air__items {
   margin-top: 30px;
-  display: flex;
-  gap: 45px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.8%;
 }
 .air__item {
   width: 560px;
@@ -4409,7 +4409,9 @@ iframe {
     overflow: hidden;
   }
   .air__items {
+    display: flex;
     flex-direction: column;
+    gap: 45px;
     margin-top: 3vw;
   }
   .air__item {
