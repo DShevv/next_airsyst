@@ -1196,16 +1196,21 @@ iframe {
   margin-top: 15px;
 }
 .equipment__items {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /*  display: flex;
   flex-wrap: wrap;
+  justify-content: center; */
+  column-gap: 2.3%;
+  row-gap: 27px;
 }
 .equipment__item {
   position: relative;
   width: 370px;
   height: 370px;
   border-radius: 5px;
-  margin-right: 27px;
-  margin-top: 30px;
+  /*   margin-right: 27px;
+  margin-top: 30px; */
   transition: all 0.3s ease;
 }
 .equipment__item img {
@@ -4393,6 +4398,7 @@ iframe {
     margin: 0;
   }
   .equipment__items {
+    display: flex;
     flex-direction: column;
   }
   .equipment__item {

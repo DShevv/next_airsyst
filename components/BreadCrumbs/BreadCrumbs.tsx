@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 
 interface Props {
   currentName: string;
-  items: [{ title: string; link: string }];
+  items: { title: string; link: string }[];
 }
 
 export default function BreadCrumbs({ currentName, items }: Props) {
@@ -11,7 +11,7 @@ export default function BreadCrumbs({ currentName, items }: Props) {
     <div className={styles.container}>
       {items.map((elem) => (
         <Link className={styles.link} key={elem.link} href={elem.link}>
-          {elem.title} /
+          {elem.title} /{" "}
         </Link>
       ))}
       <span className={styles.current}> {currentName}</span>

@@ -10,7 +10,7 @@ interface Props {
 
 export default function ProductItem({ href, image, title, companies }: Props) {
   return (
-    <Link href={`products${href}`} className="bid__item">
+    <Link href={href} className="bid__item">
       <div className="bid__preview">
         <Image
           className="lazyload"
