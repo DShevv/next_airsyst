@@ -8,7 +8,7 @@ interface Props {
   onChange: (value: boolean | string) => void;
 }
 
-export default function FeedBachCheckbox({
+export default function FormCheckbox({
   className,
   id,
   label,

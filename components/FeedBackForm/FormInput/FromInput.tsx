@@ -9,7 +9,7 @@ interface Props {
   onChange: (value: string | boolean) => void;
 }
 
-export default function FeedBackInput({
+export default function FromInput({
   className,
   type,
   name,
