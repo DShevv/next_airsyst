@@ -1,7 +1,7 @@
 "use client";
 import { ChangeEvent, useEffect, useState } from "react";
-import FeedBackInput from "./FeedBackInput/FeedBackInput";
-import FeedBachCheckbox from "./FeedBachCheckbox/FeedBachCheckbox";
+import FromInput from "./FormInput/FromInput";
+import FormCheckbox from "./FormCheckbox/FormCheckbox";
 import Image from "next/image";
 import check from "../../public/img/icons/check.svg";
 
@@ -56,7 +56,7 @@ export default function FeedBackForm({ url }: Props) {
     >
       <div className="form__title">Оставьте заявку</div>
       <div className="form__inputs">
-        <FeedBackInput
+        <FromInput
           className="small"
           type="text"
           name="country"
@@ -64,7 +64,7 @@ export default function FeedBackForm({ url }: Props) {
           value={data.country}
           onChange={createOnChange("country")}
         />
-        <FeedBackInput
+        <FromInput
           className="small"
           type="text"
           name="company"
@@ -72,7 +72,7 @@ export default function FeedBackForm({ url }: Props) {
           value={data.company}
           onChange={createOnChange("company")}
         />
-        <FeedBackInput
+        <FromInput
           className="small"
           type="phone"
           name="phone"
@@ -80,7 +80,7 @@ export default function FeedBackForm({ url }: Props) {
           value={data.phone}
           onChange={createOnChange("phone")}
         />
-        <FeedBackInput
+        <FromInput
           className="small"
           type="email"
           name="email"
@@ -88,7 +88,7 @@ export default function FeedBackForm({ url }: Props) {
           value={data.email}
           onChange={createOnChange("email")}
         />
-        <FeedBackInput
+        <FromInput
           className="small"
           type="text"
           name="site"
@@ -96,7 +96,7 @@ export default function FeedBackForm({ url }: Props) {
           value={data.site}
           onChange={createOnChange("site")}
         />
-        <FeedBackInput
+        <FromInput
           className="small"
           type="text"
           name="FullName"
@@ -107,19 +107,19 @@ export default function FeedBackForm({ url }: Props) {
       </div>
       <span>Желаемое оборудование:</span>
       <div className="form__radios">
-        <FeedBachCheckbox
+        <FormCheckbox
           id="gen"
           label="Генераторы газов"
           value={data.isGen}
           onChange={createOnChange("isGen")}
         />
-        <FeedBachCheckbox
+        <FormCheckbox
           id="compressor"
           label="Компрессоры и воздуходувки"
           value={data.isComp}
           onChange={createOnChange("isComp")}
         />
-        <FeedBachCheckbox
+        <FormCheckbox
           id="diesel"
           label="Дизельгенераторы"
           value={data.isDiesel}

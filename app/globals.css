@@ -2153,6 +2153,7 @@ iframe {
 }
 .card__item img {
   width: 100%;
+  height: auto;
 }
 .card__item iframe {
   width: 100%;
@@ -2666,6 +2667,10 @@ iframe {
   font-size: 18px;
   line-height: 24px;
 }
+
+.page-gen-clear__text ul {
+  padding: 13px;
+}
 .page-gen-clear__imgs img {
   max-width: 100%;
   margin-bottom: 20px;
@@ -2728,6 +2733,14 @@ iframe {
 .page-gen-text a {
   color: #000;
   font-weight: 700;
+}
+
+.pdf-download {
+  margin-bottom: 60px;
+}
+
+.page-gen-text.tac a:hover {
+  color: #000;
 }
 .page-gen-text.tac {
   text-align: center;
