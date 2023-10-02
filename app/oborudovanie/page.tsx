@@ -26,7 +26,11 @@ export default function Oborudovanie() {
             image={image}
             title="Генераторы азота"
           />
-          <EquipmentItem href="compressors" image={image} title="Компрессоры" />
+          <EquipmentItem
+            href="oxy-gen"
+            image={image}
+            title="Генераторы кислорода"
+          />
           <EquipmentItem href="compressors" image={image} title="Компрессоры" />
           <EquipmentItem href="compressors" image={image} title="Компрессоры" />
           <EquipmentItem href="compressors" image={image} title="Компрессоры" />

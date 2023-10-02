@@ -7,7 +7,7 @@ import gen2 from "@/public/img/images/gen-item-2.jpg";
 import gen3 from "@/public/img/images/gen-item-3.jpg";
 import pagegen1 from "@/public/img/images/page-gen-bot-1.jpg";
 import pagetext from "@/public/img/images/page-gen-text-image.jpg";
-import blokinfo from "@/public/img/images/block-info-2.png";
+import blokinfo from "@/public/img/images/block-info.png";
 import best from "@/public/img/images/Group 180.png";
 import nine from "@/public/img/images/999999ru 1.png";
 import asys from "@/public/img/images/azotsistem-3 1 1.png";
