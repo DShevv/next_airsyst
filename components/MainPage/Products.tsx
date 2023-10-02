@@ -1,5 +1,6 @@
 import ProductItem from "./ProductItem";
 import obrImage from "../../public/img/images/main-eq.png";
+import sevice from "../../public/img/images/bid-2.png";
 import airsyst from "../../public/img/images/airsyst.svg";
 
 const companiess = [airsyst, airsyst, airsyst, airsyst, airsyst, airsyst];
@@ -15,9 +16,9 @@ export default function Products() {
           companies={companiess}
         />
         <ProductItem
-          title="Оборудование"
-          image={obrImage}
-          href="/oborudovanie"
+          title="Сервис и обслуживание"
+          image={sevice}
+          href="/service-center"
           companies={companiess}
         />
         <ProductItem

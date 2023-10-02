@@ -1,6 +1,10 @@
 import AirItem from "@/components/AirItem/AirItem";
 import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
 import image from "@/public/img/images/Group_217.png";
+import image2 from "@/public/img/images/vint.png";
+import image3 from "@/public/img/images/vinth2o.png";
+import image4 from "@/public/img/images/diaselcomp.png";
+import image5 from "@/public/img/images/pistol.png";
 
 export default function Compressors() {
   return (
@@ -34,23 +38,23 @@ export default function Compressors() {
           />
           <AirItem
             href="vintovye-maslosmazyvaemye-kompressory"
-            title="Винтовые маслосмазываемые компрессоры"
-            image={image}
+            title="Винтовые безмаслянные компрессоры сухого типа"
+            image={image2}
           />
           <AirItem
             href="vintovye-maslosmazyvaemye-kompressory"
-            title="Винтовые маслосмазываемые компрессоры"
-            image={image}
+            title="Винтовые безмаслянные компрессоры с водяной смазкой"
+            image={image3}
           />
           <AirItem
             href="vintovye-maslosmazyvaemye-kompressory"
-            title="Винтовые маслосмазываемые компрессоры"
-            image={image}
+            title="Передвижные дизельные компрессоры"
+            image={image4}
           />
           <AirItem
             href="vintovye-maslosmazyvaemye-kompressory"
-            title="Винтовые маслосмазываемые компрессоры"
-            image={image}
+            title="Поршневые компрессоры"
+            image={image5}
           />
         </div>
         <p></p>

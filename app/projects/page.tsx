@@ -1,9 +1,8 @@
 import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
-import styles from "./page.module.css";
 import SelectList from "@/components/SelectList/SelectList";
 import Image from "next/image";
-import air from "../../public/img/images/airsyst.svg";
-import volk from "../../public/img/images/ВКМК.jpg";
+import air from "@/public/img/images/airsyst.svg";
+import volk from "@/public/img/images/ВКМК.jpg";
 
 export default function Projects() {
   return (
