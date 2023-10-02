@@ -1248,6 +1248,7 @@ iframe {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.8%;
+  margin-bottom: 115px;
 }
 .air__item {
   width: 560px;

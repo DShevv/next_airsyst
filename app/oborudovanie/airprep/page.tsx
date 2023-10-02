@@ -1,6 +1,7 @@
 import AirItem from "@/components/AirItem/AirItem";
 import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
-import image from "@/public/img/images/Group_217.png";
+import image from "@/public/img/images/tank.jpg";
+import image2 from "@/public/img/images/colons.jpg";
 
 export default function AirPrep() {
   return (
@@ -19,7 +20,7 @@ export default function AirPrep() {
 
         <div className="air__items">
           <AirItem href="resivers" title="Ресиверы" image={image} />
-          <AirItem href="coat-columns" title="Угольные колоны" image={image} />
+          <AirItem href="coat-columns" title="Угольные колоны" image={image2} />
         </div>
       </section>
     </main>
