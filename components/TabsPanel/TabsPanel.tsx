@@ -36,7 +36,7 @@ export default function TabsPanel({ children, thumbs }: Props) {
               </div>
             ))
           ) : (
-            <div className="card__item active">children</div>
+            <div className="card__item active">{children}</div>
           )}
         </div>
       </div>
