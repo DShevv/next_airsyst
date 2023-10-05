@@ -7,6 +7,7 @@ import { Rubik, Raleway } from "next/font/google";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { ReactNode } from "react";
+import ToHeader from "@/components/ToHeader/ToHeader";
 
 const rubik = Rubik({ subsets: ["latin", "cyrillic"] });
 const raleway = Raleway({ subsets: ["latin", "cyrillic"] });
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: Props) {
         <NavBar />
         {children}
         <Footer />
+        <ToHeader />
       </body>
     </html>
   );
