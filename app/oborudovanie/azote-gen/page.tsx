@@ -446,11 +446,11 @@ export default function Compressors() {
         </div>
         <div className="card__gallery">
           <Image src={ni1} height={277} width={369} alt="" placeholder="blur" />
-          <Image src={ni2} height={277} width={369} alt="" />
-          <Image src={ni3} height={277} width={369} alt="" />
-          <Image src={ni4} height={277} width={369} alt="" />
-          <Image src={ni5} height={277} width={369} alt="" />
-          <Image src={ni6} height={277} width={369} alt="" />
+          <Image src={ni2} height={277} width={369} alt="" placeholder="blur" />
+          <Image src={ni3} height={277} width={369} alt="" placeholder="blur" />
+          <Image src={ni4} height={277} width={369} alt="" placeholder="blur" />
+          <Image src={ni5} height={277} width={369} alt="" placeholder="blur" />
+          <Image src={ni6} height={277} width={369} alt="" placeholder="blur" />
         </div>
       </TabsPanel>
       <section className="feedback wrap">
