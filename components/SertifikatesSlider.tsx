@@ -1,8 +1,9 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import testPic from "../public/img/images/certificates.jpg";
+import testPic from "../public/img/images/cerf.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SertifikatesSlider() {
   return (
@@ -20,46 +21,60 @@ export default function SertifikatesSlider() {
       }}
     >
       <SwiperSlide className="certificate-slide">
-        <Image src={testPic} alt="сертификат" height={470} width={332} />
-        <div className="certificate-slide__title">
-          Сертификат ТР ТС 10 фильтры
-        </div>
+        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
+          <Image src={testPic} alt="сертификат" height={470} width={332} />
+          <div className="certificate-slide__title">
+            Сертификат ТР ТС 10 фильтры
+          </div>
+        </Link>
       </SwiperSlide>
       <SwiperSlide className="certificate-slide">
-        <Image src={testPic} alt="сертификат" height={470} width={332} />
-        <div className="certificate-slide__title">
-          Сертификат ТР ТС 10 фильтры
-        </div>
+        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
+          <Image src={testPic} alt="сертификат" height={470} width={332} />
+          <div className="certificate-slide__title">
+            Сертификат ТР ТС 10 фильтры
+          </div>
+        </Link>
       </SwiperSlide>
       <SwiperSlide className="certificate-slide">
-        <Image src={testPic} alt="сертификат" height={470} width={332} />
-        <div className="certificate-slide__title">
-          Сертификат ТР ТС 10 фильтры
-        </div>
+        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
+          <Image src={testPic} alt="сертификат" height={470} width={332} />
+          <div className="certificate-slide__title">
+            Сертификат ТР ТС 10 фильтры
+          </div>
+        </Link>
       </SwiperSlide>
       <SwiperSlide className="certificate-slide">
-        <Image src={testPic} alt="сертификат" height={470} width={332} />
-        <div className="certificate-slide__title">
-          Сертификат ТР ТС 10 фильтры
-        </div>
+        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
+          <Image src={testPic} alt="сертификат" height={470} width={332} />
+          <div className="certificate-slide__title">
+            Сертификат ТР ТС 10 фильтры
+          </div>
+        </Link>
       </SwiperSlide>
       <SwiperSlide className="certificate-slide">
-        <Image src={testPic} alt="сертификат" height={470} width={332} />
-        <div className="certificate-slide__title">
-          Сертификат ТР ТС 10 фильтры
-        </div>
+        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
+          <Image src={testPic} alt="сертификат" height={470} width={332} />
+          <div className="certificate-slide__title">
+            Сертификат ТР ТС 10 фильтры
+          </div>
+        </Link>
       </SwiperSlide>
       <SwiperSlide className="certificate-slide">
-        <Image src={testPic} alt="сертификат" height={470} width={332} />
-        <div className="certificate-slide__title">
-          Сертификат ТР ТС 10 фильтры
-        </div>
+        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
+          <Image src={testPic} alt="сертификат" height={470} width={332} />
+          <div className="certificate-slide__title">
+            Сертификат ТР ТС 10 фильтры
+          </div>
+        </Link>
       </SwiperSlide>
       <SwiperSlide className="certificate-slide">
-        <Image src={testPic} alt="сертификат" height={470} width={332} />
-        <div className="certificate-slide__title">
-          Сертификат ТР ТС 10 фильтры
-        </div>
+        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
+          <Image src={testPic} alt="сертификат" height={470} width={332} />
+          <div className="certificate-slide__title">
+            Сертификат ТР ТС 10 фильтры
+          </div>
+        </Link>
       </SwiperSlide>
     </Swiper>
   );

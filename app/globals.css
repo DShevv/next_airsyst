@@ -65,6 +65,14 @@ html,
 body {
   width: 100vw;
   overflow-x: hidden;
+  position: relative;
+}
+.certificate-slide a {
+  color: inherit;
+}
+
+.certificate-slide a:hover {
+  color: inherit;
 }
 
 .wrap {

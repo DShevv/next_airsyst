@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Rubik, Raleway } from "next/font/google";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import { ReactNode } from "react";
 
 const rubik = Rubik({ subsets: ["latin", "cyrillic"] });
 const raleway = Raleway({ subsets: ["latin", "cyrillic"] });
@@ -17,11 +18,11 @@ export const metadata: Metadata = {
     "ТОО “Энерготех” является официальным представителем промышленного оборудования группы компаний AIRSYST в Казахстане.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+interface Props {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <head>
