@@ -13,6 +13,10 @@ import Email from "./Email";
 export default function NavBar() {
   const [isOpened, setIsOpened] = useState(false);
 
+  const handleClick = () => {
+    setIsOpened(false);
+  };
+
   return (
     <>
       <nav className="nav">
@@ -81,25 +85,29 @@ export default function NavBar() {
       </nav>
       <div className={`nav-mobile mobile ${isOpened && "active"}`}>
         <div className="nav__items">
-          <Link className="nav__item" href={"/products"}>
+          <Link className="nav__item" href={"/products"} onClick={handleClick}>
             Наши продукты
           </Link>
-          <Link className="nav__item" href={"/about"}>
+          <Link className="nav__item" href={"/about"} onClick={handleClick}>
             О компании
           </Link>
-          <Link className="nav__item" href={"/news"}>
+          <Link className="nav__item" href={"/news"} onClick={handleClick}>
             Новости
           </Link>
-          <Link className="nav__item" href={"/proekty"}>
+          <Link className="nav__item" href={"/projects"} onClick={handleClick}>
             Наши проекты
           </Link>
-          <Link className="nav__item" href={"/sertifikaty"}>
+          <Link
+            className="nav__item"
+            href={"/sertifikaty"}
+            onClick={handleClick}
+          >
             Сертификаты
           </Link>
-          <Link className="nav__item" href={"/contacts"}>
+          <Link className="nav__item" href={"/contacts"} onClick={handleClick}>
             Контакты
           </Link>
-          <Link className="nav__item" href={"/diallers"}>
+          <Link className="nav__item" href={"/diallers"} onClick={handleClick}>
             Дилерам
           </Link>
         </div>
