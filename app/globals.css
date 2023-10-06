@@ -603,7 +603,7 @@ body {
 .footer {
   background: #eff4ff;
   padding: 75px 0 60px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 .footer .wrap {
   display: flex;
@@ -4822,7 +4822,6 @@ iframe {
 }
 
 .certificate-slide {
-
   position: relative;
   transform: scale(0.9) !important;
   background: #f6f7fc;

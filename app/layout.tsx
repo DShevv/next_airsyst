@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import { ReactNode } from "react";
 import ToHeader from "@/components/ToHeader/ToHeader";
 
-const rubik = Rubik({ subsets: ["latin", "cyrillic"] });
+//const rubik = Rubik({ subsets: ["latin", "cyrillic"] });
 const raleway = Raleway({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
