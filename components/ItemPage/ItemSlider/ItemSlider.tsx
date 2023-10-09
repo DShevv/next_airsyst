@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as TSwiper } from "swiper/types";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import Image from "next/image";
 
@@ -9,7 +10,7 @@ interface Props {
 }
 
 export default function ItemSlider({ images }: Props) {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<TSwiper | null>(null);
 
   return (
     <div className="card__sliders">
