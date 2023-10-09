@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 
-export default function useOutsideAlerter(ref, callback: () => void) {
+export default function useOutsideAlerter(ref: any, callback: () => void) {
   useEffect(() => {
-    function handleClickOutside(event) {
+    function handleClickOutside(event: any) {
       if (ref.current && !ref.current.contains(event.target)) {
         callback();
       }

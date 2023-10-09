@@ -16,7 +16,7 @@ export default function ToHeader() {
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
-  }, []);
+  }, [onScroll]);
 
   return (
     <div
