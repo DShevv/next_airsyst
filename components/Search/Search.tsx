@@ -18,9 +18,13 @@ export default function Search() {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setIsLoading(true);
+      if (search !== "") {
+        setIsLoading(true);
+      }
+
       //! search querry
     }, 500);
+
     return () => clearTimeout(timeout);
   }, [search]);
 
