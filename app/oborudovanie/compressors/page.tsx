@@ -32,7 +32,7 @@ export default function Compressors() {
         <p></p>
         <div className="air__items">
           <AirItem
-            href="vintovye-maslosmazyvaemye-kompressory"
+            href="vint"
             title="Винтовые маслосмазываемые компрессоры"
             image={image}
           />
