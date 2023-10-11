@@ -3,7 +3,7 @@ import ProjectSlider from "@/components/ProjectSlider/ProjectSlider";
 import React from "react";
 import image from "@/public/img/images/генератор.jpg";
 
-export default function page() {
+export default function Page() {
   return (
     <main>
       <div className="wrap">

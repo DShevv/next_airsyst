@@ -1,5 +1,4 @@
 import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
-import styles from "./page.module.css";
 import SertifikatesSlider from "@/components/SertifikatesSlider";
 
 export default function Certificates() {

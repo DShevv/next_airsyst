@@ -8,6 +8,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { ReactNode } from "react";
 import ToHeader from "@/components/ToHeader/ToHeader";
+import ImageModal from "@/components/ImageModal/ImageModal";
 
 const rubik = Rubik({ subsets: ["latin", "cyrillic"] });
 const raleway = Raleway({ subsets: ["latin", "cyrillic"] });
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: Props) {
         {children}
         <Footer />
         <ToHeader />
+        <ImageModal />
       </body>
     </html>
   );
