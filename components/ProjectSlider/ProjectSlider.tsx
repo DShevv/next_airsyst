@@ -31,6 +31,7 @@ export default function ProjectSlider({ images }: Props) {
                 height={340}
                 width={273}
                 placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP0Tk+vBwADuAGaXigw8gAAAABJRU5ErkJggg=="
               />
             </Link>
           </SwiperSlide>
