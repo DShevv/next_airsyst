@@ -61,7 +61,7 @@ export default function Projects() {
                 Планируемый срок ввода вэксплуатацию - середина октября 2023. По
                 результатам запуска мы добавим видеоотчет о работе станции.
               </div>
-              <a href="/proekt/100/" className="btn">
+              <a href="/projects/100/" className="btn">
                 Подробнее
               </a>
             </div>
