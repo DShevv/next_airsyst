@@ -6,16 +6,27 @@ import openImg from "../public/img/icons/nav-open.svg";
 import cartImg from "../public/img/icons/shopping card.png";
 import Link from "next/link";
 import Contacts from "./Contacts";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import WorkTime from "./WorkTime";
 import Email from "./Email";
 
 export default function NavBar() {
   const [isOpened, setIsOpened] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
 
   const handleClick = () => {
     setIsOpened(false);
   };
+
+  useEffect(() => {
+    const store = localStorage.getItem("cart");
+    if (store !== undefined && store !== null) {
+      const count = JSON.parse(store).length;
+      setCartCount(count);
+    } else {
+      setCartCount(0);
+    }
+  }, []);
 
   return (
     <>
@@ -53,7 +64,7 @@ export default function NavBar() {
               Дилерам
             </Link>
           </div>
-          <a href="{% url 'cart' %}" className="shopping-cart" attr-count="">
+          <a href="cart" className="shopping-cart" attr-count={cartCount}>
             <Image
               width={30}
               height={25}
