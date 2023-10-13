@@ -118,7 +118,9 @@ export default function Cart() {
   const createOnDelete = (id: string) => {
     return () => {
       const newItems = items.filter((item) => item.id !== id);
-
+      document
+        .querySelector(".shopping-cart")
+        ?.setAttribute("attr-count", newItems.length.toString());
       setItems(newItems);
       pushItems(newItems);
     };
@@ -149,6 +151,9 @@ export default function Cart() {
 
   const deleteSelectedItems = () => {
     const newItems = items.filter((item) => !item.isSelected);
+    document
+      .querySelector(".shopping-cart")
+      ?.setAttribute("attr-count", newItems.length.toString());
     setItems(newItems);
     pushItems(newItems);
   };
