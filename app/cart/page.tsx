@@ -76,19 +76,16 @@ const setTestData = () => {
   localStorage.setItem("cart", JSON.stringify(items));
 };
 
-export default function Cart() {
-  const [isSelectedAll, setIsSelectedAll] = useState(false);
-  const [items, setItems] = useState<Item[]>(getItems());
+const pushItems = (items: Item[]) => {
+  const storeItems: CookieItem[] = items.map((item) => ({
+    ...item,
+  }));
 
-  const pushItems = (items: Item[]) => {
-    const storeItems: CookieItem[] = items.map((item) => ({
-      ...item,
-    }));
+  localStorage.setItem("cart", JSON.stringify(storeItems));
+};
 
-    localStorage.setItem("cart", JSON.stringify(storeItems));
-  };
-
-  function getItems(): Item[] {
+const getItems = (): Item[] => {
+  if (window !== undefined) {
     const cookieItems = localStorage.getItem("cart");
     const storedItems: CookieItem[] =
       cookieItems !== undefined && cookieItems !== null
@@ -103,59 +100,77 @@ export default function Cart() {
       }));
       return newItems;
     }
-    return [];
   }
+  return [];
+};
+
+export default function Cart() {
+  const [isSelectedAll, setIsSelectedAll] = useState(false);
+  const [items, setItems] = useState<Item[]>();
 
   useEffect(() => {
-    const newItems = items.map((item) => ({
-      ...item,
-      isSelected: isSelectedAll,
-    }));
+    setItems(getItems());
+  }, []);
 
-    setItems(newItems);
+  useEffect(() => {
+    if (items) {
+      const newItems = items.map((item) => ({
+        ...item,
+        isSelected: isSelectedAll,
+      }));
+      setItems(newItems);
+    }
   }, [isSelectedAll]);
 
   const createOnDelete = (id: string) => {
     return () => {
-      const newItems = items.filter((item) => item.id !== id);
-      document
-        .querySelector(".shopping-cart")
-        ?.setAttribute("attr-count", newItems.length.toString());
-      setItems(newItems);
-      pushItems(newItems);
+      if (items) {
+        const newItems = items.filter((item) => item.id !== id);
+        document
+          .querySelector(".shopping-cart")
+          ?.setAttribute("attr-count", newItems.length.toString());
+        setItems(newItems);
+        pushItems(newItems);
+      }
     };
   };
 
   const createSetCount = (id: string) => {
     return (count: number) => {
-      const newItems = items.map((item) =>
-        item.id === id
-          ? { ...item, count: count, total: getTotal(item.price, count) }
-          : item
-      );
+      if (items) {
+        const newItems = items.map((item) =>
+          item.id === id
+            ? { ...item, count: count, total: getTotal(item.price, count) }
+            : item
+        );
 
-      setItems(newItems);
-      pushItems(newItems);
+        setItems(newItems);
+        pushItems(newItems);
+      }
     };
   };
 
   const createSetIsSelected = (id: string) => {
     return (isSelected: boolean) => {
-      setItems(
-        items.map((item) =>
-          item.id === id ? { ...item, isSelected: isSelected } : item
-        )
-      );
+      if (items) {
+        setItems(
+          items.map((item) =>
+            item.id === id ? { ...item, isSelected: isSelected } : item
+          )
+        );
+      }
     };
   };
 
   const deleteSelectedItems = () => {
-    const newItems = items.filter((item) => !item.isSelected);
-    document
-      .querySelector(".shopping-cart")
-      ?.setAttribute("attr-count", newItems.length.toString());
-    setItems(newItems);
-    pushItems(newItems);
+    if (items) {
+      const newItems = items.filter((item) => !item.isSelected);
+      document
+        .querySelector(".shopping-cart")
+        ?.setAttribute("attr-count", newItems.length.toString());
+      setItems(newItems);
+      pushItems(newItems);
+    }
   };
 
   return (
@@ -193,18 +208,19 @@ export default function Cart() {
                 <div className="shop-cart__col"></div>
               </div>
               <div className="shop-cart__items">
-                {items.map((item) => (
-                  <CartItem
-                    key={item.id}
-                    {...item}
-                    onDelete={createOnDelete(item.id)}
-                    setCount={createSetCount(item.id)}
-                    setIsSelected={createSetIsSelected(item.id)}
-                  />
-                ))}
+                {items &&
+                  items.map((item) => (
+                    <CartItem
+                      key={item.id}
+                      {...item}
+                      onDelete={createOnDelete(item.id)}
+                      setCount={createSetCount(item.id)}
+                      setIsSelected={createSetIsSelected(item.id)}
+                    />
+                  ))}
               </div>
             </div>
-            <CartTotal items={items} />
+            <CartTotal items={items ? items : []} />
           </div>
         </div>
       </section>
