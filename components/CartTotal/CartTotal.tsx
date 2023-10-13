@@ -47,7 +47,6 @@ export default function CartTotal({ items }: Props) {
   const getTotalWeight = () => {
     let weight = 0;
     items.forEach((item) => (weight += item.weight));
-    console.log(weight);
 
     return `${Math.floor((weight / 1000) * 10) / 10}`;
   };
@@ -70,7 +69,7 @@ export default function CartTotal({ items }: Props) {
           dangerouslySetInnerHTML={{ __html: getTotalPrice() }}
         ></div>
       </div>
-      <Link href="/zakaz/" className="btn">
+      <Link href="/order" className="btn">
         Оформить заказ
       </Link>
     </div>
