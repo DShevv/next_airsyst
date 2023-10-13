@@ -76,35 +76,35 @@ const setTestData = () => {
   localStorage.setItem("cart", JSON.stringify(items));
 };
 
-const pushItems = (items: Item[]) => {
-  const storeItems: CookieItem[] = items.map((item) => ({
-    ...item,
-  }));
-
-  localStorage.setItem("cart", JSON.stringify(storeItems));
-};
-
-const getItems = (): Item[] => {
-  const cookieItems = localStorage.getItem("cart");
-  const storedItems: CookieItem[] =
-    cookieItems !== undefined && cookieItems !== null
-      ? JSON.parse(cookieItems)
-      : [];
-
-  if (cookieItems && storedItems.length > 0) {
-    const newItems = storedItems.map((item) => ({
-      ...item,
-      total: getTotal(item.price, item.count),
-      isSelected: false,
-    }));
-    return newItems;
-  }
-  return [];
-};
-
 export default function Cart() {
   const [isSelectedAll, setIsSelectedAll] = useState(false);
   const [items, setItems] = useState<Item[]>(getItems());
+
+  const pushItems = (items: Item[]) => {
+    const storeItems: CookieItem[] = items.map((item) => ({
+      ...item,
+    }));
+
+    localStorage.setItem("cart", JSON.stringify(storeItems));
+  };
+
+  function getItems(): Item[] {
+    const cookieItems = localStorage.getItem("cart");
+    const storedItems: CookieItem[] =
+      cookieItems !== undefined && cookieItems !== null
+        ? JSON.parse(cookieItems)
+        : [];
+
+    if (cookieItems && storedItems.length > 0) {
+      const newItems = storedItems.map((item) => ({
+        ...item,
+        total: getTotal(item.price, item.count),
+        isSelected: false,
+      }));
+      return newItems;
+    }
+    return [];
+  }
 
   useEffect(() => {
     const newItems = items.map((item) => ({
