@@ -59,7 +59,7 @@ export default function Search() {
         {isLoading && (
           <SearchItem
             item={{
-              url: "cock",
+              url: "/place",
               image: test,
               title: "ВИНТОВОЙ КОМПРЕССОР AS-4TC AIRSYST",
               art: "AS8742",
