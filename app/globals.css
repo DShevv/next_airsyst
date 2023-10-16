@@ -4851,10 +4851,10 @@ iframe {
 
 .certificate-slide__title {
   position: absolute;
-  width: 100%;
+  width: 110%;
   text-align: center;
   bottom: -47px;
-  left: 0;
+  left: -15px;
   font-size: 16px;
 }
 
