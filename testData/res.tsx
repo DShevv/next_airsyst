@@ -1,0 +1,58 @@
+const data = [
+  {
+    id: "60",
+    title: "Ресивер AT-1000 (1 m3) 40 БАР ",
+    price: "4&nbsp;820&nbsp;160 KZT",
+    art: "CX1502",
+    image: "https://airsyst.kz/media/equip_images/tank.jpg",
+    link: "/oborudovanie/compressors/60",
+    weight: 10010,
+  },
+  {
+    id: "61",
+    title: "Ресивер AT-1000 (2 m3) ",
+    price: "2&nbsp;380&nbsp;110 KZT",
+    art: "OC3393",
+    image: "https://airsyst.kz/media/equip_images/tank.jpg",
+    link: "/oborudovanie/compressors/61",
+    weight: 10010,
+  },
+  {
+    id: "62",
+    title: "Ресивер AT-3000 (3 m3) ",
+    price: "3&nbsp;920&nbsp;970 KZT",
+    art: "UA2536",
+    image: "https://airsyst.kz/media/equip_images/tank.jpg",
+    link: "/oborudovanie/compressors/62",
+    weight: 10010,
+  },
+  {
+    id: "63",
+    title: "Ресивер AT-4000 (4 m3)",
+    price: "4&nbsp;253&nbsp;160 KZT",
+    art: "CF1782",
+    image: "https://airsyst.kz/media/equip_images/tank.jpg",
+    link: "/oborudovanie/compressors/63",
+    weight: 15010,
+  },
+  {
+    id: "64",
+    title: "Ресивер AT-6000 (6 m3) ",
+    price: "7&nbsp;320&nbsp;282 KZT",
+    art: "FZ2266",
+    image: "https://airsyst.kz/media/equip_images/tank.jpg",
+    link: "/oborudovanie/compressors/64",
+    weight: 20010,
+  },
+  {
+    id: "65",
+    title: "Ресивер AT-10000 (10 m3) ",
+    price: "9&nbsp;385&nbsp;300 KZT",
+    art: "RC4565",
+    image: "https://airsyst.kz/media/equip_images/tank.jpg",
+    link: "/oborudovanie/compressors/65",
+    weight: 22010,
+  },
+];
+
+export default data;

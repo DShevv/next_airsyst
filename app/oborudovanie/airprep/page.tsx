@@ -20,7 +20,7 @@ export default function AirPrep() {
 
         <div className="air__items">
           <AirItem href="resivers" title="Ресиверы" image={image} />
-          <AirItem href="coat-columns" title="Угольные колоны" image={image2} />
+          <AirItem href="coal-columns" title="Угольные колоны" image={image2} />
         </div>
       </section>
     </main>

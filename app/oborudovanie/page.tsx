@@ -24,7 +24,7 @@ export default function Oborudovanie() {
         <div className="equipment__items">
           <EquipmentItem href="compressors" image={image} title="Компрессоры" />
           <EquipmentItem href="airprep" image={voz} title="Воздухоподготовка" />
-          <EquipmentItem href="compressors" image={vozh} title="Компрессоры" />
+          <EquipmentItem href="vozduh" image={vozh} title="Воздуходувки" />
           <EquipmentItem href="azote-gen" image={n2} title="Генераторы азота" />
           <EquipmentItem
             href="oxy-gen"
