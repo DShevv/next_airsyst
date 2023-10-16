@@ -1,3 +1,4 @@
+"use client";
 import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
 import Image from "next/image";
 import photo from "@/public/img/images/photo_2022-03-12_13-55-38 1.jpg";
@@ -9,8 +10,108 @@ import SelectList from "@/components/SelectList/SelectList";
 import air from "@/public/img/images/airsyst.svg";
 import volk from "@/public/img/images/ВКМК.jpg";
 import Link from "next/link";
+import atlas from "@/public/img/images/atlascopo.svg";
+import grodno from "@/public/img/images/grodno.bmp";
+import renner from "@/public/img/images/renner.bmp";
+import choc from "@/public/img/images/choclate.bmp";
+import { useState } from "react";
 
 export default function Projects() {
+  const [selection, setSelection] = useState("");
+
+  const onSelect = (newSelection: string | undefined) => {
+    if (newSelection !== undefined) {
+      setSelection(newSelection);
+    }
+  };
+  const repair = () => {
+    return (
+      <div className="projects__items">
+        <div className="projects__item">
+          <div className="projects__preview">
+            <Image width={255} height={300} alt="" src={grodno} />
+            <Image
+              width={100}
+              height={30}
+              alt=""
+              className="projects__manufacturer"
+              src={renner}
+            />{" "}
+          </div>
+          <div className="projects__content">
+            <div className="projects__date">
+              <div className="projects__day">10</div>
+              <div className="project__small-date">
+                <div className="projects__month">апреля</div>
+                <div className="projects__year">2022</div>
+              </div>
+            </div>
+            <div className="projects__customer">
+              ОАО &quot;Гродно Азот&quot; (Беларусь)
+            </div>
+            <div className="projects__name">
+              Шефмонтаж и ПНР компрессорной станции с адсорбционными осушителями
+            </div>
+            <div className="projects__descr">
+              Проведение шефмонтажный и пусконаладочных работ в цехе Олеум.
+              После введения санкций немецкий поставщик комплексного
+              оборудования отказался проводить запуск оборудования в
+              эксплуатацию. В результате чего специалисты группы компаний
+              AIRSYST провели оценку поставленного оборудования, произвели
+              расстановку оборудования на ограниченной площадке, провели ревизию
+              материалов для монтажа, скомпоновали обвязку, произвели
+              подключение слаботочных систем управления, запустили оборудование
+              в работу, сдали объект в эксплуатацию. Особенности выполнеия
+              проекта: 1. Отсутствие описания по поставленным комплектующим для
+              монтажа компрессорной станции (приходилось разбираться со всеми
+              вопросами на месте) 2. Отсутствие свободного доступа на склад
+              временного хранения (пришлось договариваться с зав. складом о
+              доступе на склад, для ревизии комонентов и компоновки обвязки) 3.
+              Осуществление обвязки в работающем цеху (повышенный шум, опасность
+              выброса сернистого газа)
+            </div>
+            <a href="/projects/82/" className="btn">
+              Подробнее
+            </a>
+          </div>
+        </div>
+        <div className="projects__item">
+          <div className="projects__preview">
+            <Image width={255} height={300} alt="" src={choc} />
+            <Image
+              width={100}
+              height={30}
+              alt=""
+              className="projects__manufacturer"
+              src={atlas}
+            />{" "}
+          </div>
+          <div className="projects__content">
+            <div className="projects__date">
+              <div className="projects__day">01</div>
+              <div className="project__small-date">
+                <div className="projects__month">марта</div>
+                <div className="projects__year">2022</div>
+              </div>
+            </div>
+            <div className="projects__customer">
+              CADBURYS CHOCLATE (Великобритания)
+            </div>
+            <div className="projects__name">обслуживание AtlasCopco</div>
+            <div className="projects__descr">
+              Проведение плановых технических обслуживаний на безмаслянных
+              винтовых компрессорах ZR90VSD; ZR110VSD; COMPAIR D90 (замена
+              сервисных наборов 4000; 8000; 16000)
+            </div>
+            <a href="/projects/1/" className="btn">
+              Подробнее
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <main>
       <div className="wrap">
@@ -183,60 +284,15 @@ export default function Projects() {
       <section className="projects wrap">
         <h1 className="title">Наши проекты</h1>
         <SelectList
+          returnSelected={onSelect}
           options={[
             { name: "Все проекты", link: "" },
             { name: "Сервис", link: "repair" },
             { name: "Продажи", link: "sell" },
           ]}
         />
-        <div className="projects__items">
-          <div className="projects__item">
-            <div className="projects__preview">
-              <Image width={255} height={300} alt="" src={volk} />
-              <Image
-                width={100}
-                height={30}
-                alt=""
-                className="projects__manufacturer"
-                src={air}
-              />
-            </div>
-            <div className="projects__content">
-              <div className="projects__date">
-                <div className="projects__day">15</div>
-                <div className="project__small-date">
-                  <div className="projects__month">августа</div>
-                  <div className="projects__year">2023</div>
-                </div>
-              </div>
-              <div className="projects__customer">
-                ОАО &quot;Волковысский мясокомбинат&quot; (Беларусь)
-              </div>
-              <div className="projects__name">
-                Азотная станция GN-400 для упаковки продуктов питания
-              </div>
-              <div className="projects__descr">
-                В августе 2023 был подписан контракт на поставку азотной
-                станции, предназначеной для упаковки пищевых продуктов.
-                Особенность станции заключается в том, что в линию упаковки
-                исключена возможность попадания некондиционного азота чистотой
-                менее 99,999%. Благодаря уникальным технологиям станция может
-                производить азот чистотой 99,9999% без дополнительной очистки.
-                Контролировать чистоту газа на протяжении всего рабочего цикла.
-                Автоматическая система сброса некондиционного азота позволяет
-                выдерживать самые высокие стандарты при производстве продукции.
-                Планируемый срок ввода вэксплуатацию - середина октября 2023. По
-                результатам запуска мы добавим видеоотчет о работе станции.
-              </div>
-              <a href="/proekt/100/" className="btn">
-                Подробнее
-              </a>
-            </div>
-          </div>
-          <Link href="/projects" className="btn">
-            Все проекты
-          </Link>
-        </div>
+
+        {repair()}
       </section>
     </main>
   );
