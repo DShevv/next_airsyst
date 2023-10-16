@@ -31,6 +31,7 @@ export default function ItemPage({
           <h1 className="card__name">{mainInfo.title}</h1>
           <div className="card__art">Артикул: {mainInfo.art}</div>
           <ItemActions
+            itemId={id}
             price={mainInfo.price}
             shipment={mainInfo.shipment}
             garant={mainInfo.garant}

@@ -1,23 +1,23 @@
 import ItemPage from "@/components/ItemPage/ItemPage";
-import { title } from "process";
 import React from "react";
+import data from "@/testData/main";
 
-export default function Page() {
+export default function Page(props: any) {
+  const product = data.find((item) => item.id === props.params.id);
+
   return (
-    <ItemPage
-      id="1"
-      mainInfo={{
-        title: "ВИНТОВОЙ КОМПРЕССОР AS-4TC AIRSYST",
-        art: "AS8742",
-        price: "2 986 230 KZT",
-        shipment: "1",
-        garant: "60",
-        images: [
-          "https://swiperjs.com/demos/images/nature-2.jpg",
-          "https://swiperjs.com/demos/images/nature-3.jpg",
-        ],
-      }}
-      description={`
+    product && (
+      <ItemPage
+        id={product.id}
+        mainInfo={{
+          title: product.title,
+          art: product.art,
+          price: product.price,
+          shipment: "1",
+          garant: "60",
+          images: [product.image],
+        }}
+        description={`
                     <p><strong>Винтовые компрессоры серии AS-4TC</strong>&nbsp;предназначены для производства сжатого воздуха для небольших предприятий малого и среднего бизнеса, с потребностью до 6,5 кубов сжатого воздуха.</p>
 <p><strong>Серия AS TC</strong> - это готовые мини-станции по производству сжатого воздуха. Компрессоры этой серии расположены на ресивере 500 л, имеют встроенные осушители и систему фильтров по 1 классу очистки воздуха от масла и твердых частиц. Они просты в эксплуатации и безотказны в работе. Лучшее решение для маленьких и средних предприятий.</p>
 <p>При производстве компрессоров используются комплектующие от ведущих европейских производителей. Остаточное содержание масла в сжатом воздухе менее 0,03 мг/м3.</p>
@@ -31,11 +31,12 @@ export default function Page() {
 <p>► Эффективная система охлаждения, обеспечивает стабильную работу компрессора.</p>
 <p>► Эргономичный корпус компрессора с легкосъемными панелями обеспечивает простой доступ к каждой части компрессора для удобства технического обслуживания</p>
                 `}
-      characteristics={[
-        { title: "Тип компрессора", value: "винтовой маслосмазываемый" },
-        { title: "Давление (бар)", value: "8/10/13" },
-        { title: "Тип привода", value: "Ременной" },
-      ]}
-    />
+        characteristics={[
+          { title: "Тип компрессора", value: "винтовой маслосмазываемый" },
+          { title: "Давление (бар)", value: "8/10/13" },
+          { title: "Тип привода", value: "Ременной" },
+        ]}
+      />
+    )
   );
 }
