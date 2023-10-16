@@ -33,7 +33,7 @@ export default function MainSlider() {
             покупаете жидкий азот или кислород в баллонах , мы рассчитаем и
             поставим под ключ все необходимое оборудование.
           </h3>
-          <a href="{{slider.link}}" className="btn">
+          <a href="/oborudovanie" className="btn">
             Узнать больше
           </a>
           <Image src={oxygen} alt="" width={260} height={350} />
@@ -44,7 +44,7 @@ export default function MainSlider() {
             Генераторы кислорода AIRSYST серии GO производительностью до 390
             м3/ч. Чистотой до 99%
           </h3>
-          <a href="{{slider.link}}" className="btn">
+          <a href="/oborudovanie/oxy-gen" className="btn">
             Узнать больше
           </a>
           <Image src={geno} alt="" width={260} height={350} />
@@ -56,7 +56,7 @@ export default function MainSlider() {
             Республике из европейских комплектующих. Высокая надежность и
             быстрая поставка.
           </h3>
-          <a href="{{slider.link}}" className="btn">
+          <a href="/oborudovanie/voaduh" className="btn">
             Узнать больше
           </a>
           <Image src={vozdu} alt="" width={260} height={350} />
@@ -67,7 +67,7 @@ export default function MainSlider() {
             Генераторы азота AIRSYST серии GN производительностью до 2750 м3/ч.
             Чистотой до 99,9999%
           </h3>
-          <a href="{{slider.link}}" className="btn">
+          <a href="/oborudovanie/azote-gen" className="btn">
             Узнать больше
           </a>
           <Image src={vozda} alt="" width={490} height={444} />
