@@ -2,6 +2,10 @@ import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
 import ProjectSlider from "@/components/ProjectSlider/ProjectSlider";
 import React from "react";
 import image from "@/public/img/images/генератор.jpg";
+import volk1 from "@/public/img/images/volk1.jpg";
+import volk2 from "@/public/img/images/volk2.jpg";
+import volk3 from "@/public/img/images/volk3.jpg";
+import volk4 from "@/public/img/images/volk4.jpg";
 
 export default function Page() {
   return (
@@ -44,7 +48,9 @@ export default function Page() {
           работе станции.
         </h4>
       </div>
-      <ProjectSlider images={[image.src, image.src, image.src, image.src]} />
+      <ProjectSlider
+        images={[image.src, volk1.src, volk2.src, volk3.src, volk4.src]}
+      />
     </main>
   );
 }

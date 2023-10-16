@@ -1,21 +1,15 @@
 "use client";
 
-import {
-  ChangeEvent,
-  ChangeEventHandler,
-  ReactNode,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 import styles from "./SelectList.module.css";
 import useOutsideRef from "@/hooks/useOutsideRef";
 
 interface Props {
   options: { name: string; link: string }[];
+  returnSelected: (value: string | undefined) => void;
 }
 
-export default function SelectList({ options }: Props) {
+export default function SelectList({ options, returnSelected }: Props) {
   const wrapperRef = useRef(null);
   useOutsideRef(wrapperRef, handelClickOutside);
   const [isActive, setIsActive] = useState(false);
@@ -24,6 +18,10 @@ export default function SelectList({ options }: Props) {
   function handelClickOutside() {
     setIsActive(false);
   }
+
+  useEffect(() => {
+    returnSelected(options.find((item) => item.name === selected)?.link);
+  }, [selected]);
 
   return (
     <div
