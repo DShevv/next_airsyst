@@ -42,7 +42,7 @@ export default function Filter({ filters }: Props) {
       value: { id: string; isChecked: boolean }[] | { min: number; max: number }
     ) => {
       setData({ ...data, [field]: value });
-      refButton.current.classList.add("active");
+      refButton.current !== null && refButton.current.classList.add("active");
     };
   };
 
@@ -78,8 +78,6 @@ export default function Filter({ filters }: Props) {
 
   useEffect(() => {
     console.log(data);
-
-    
   }, [data]);
 
   return (
