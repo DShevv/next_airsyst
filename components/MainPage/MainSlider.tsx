@@ -56,7 +56,7 @@ export default function MainSlider() {
             Республике из европейских комплектующих. Высокая надежность и
             быстрая поставка.
           </h3>
-          <a href="/oborudovanie/voaduh" className="btn">
+          <a href="/oborudovanie/vozduh" className="btn">
             Узнать больше
           </a>
           <Image src={vozdu} alt="" width={260} height={350} />

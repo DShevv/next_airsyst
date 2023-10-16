@@ -35,6 +35,19 @@ export default function Page(props: any) {
           { title: "Тип компрессора", value: "винтовой маслосмазываемый" },
           { title: "Давление (бар)", value: "8/10/13" },
           { title: "Тип привода", value: "Ременной" },
+          { title: "Мощность, кВт", value: "4" },
+          { title: "Напряжение (В)", value: "380" },
+          { title: "Класс защиты электрооборудования, IP", value: "IP 55" },
+          { title: "Уровень шума, Дб", value: "69" },
+          { title: "Давление (бар)", value: "13/10/8" },
+          { title: "Страна бренд", value: "0,35/0,45/0,55" },
+          {
+            title: "Вес (кг)",
+            value: (Math.floor((product.weight / 1000) * 10) / 10).toString(),
+          },
+          { title: "Ширина (мм)", value: "680.00" },
+          { title: "Длина (мм)", value: "1000.00" },
+          { title: "Высота (мм)", value: "860.00" },
         ]}
       />
     )
