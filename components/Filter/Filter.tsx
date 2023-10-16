@@ -42,6 +42,7 @@ export default function Filter({ filters }: Props) {
       value: { id: string; isChecked: boolean }[] | { min: number; max: number }
     ) => {
       setData({ ...data, [field]: value });
+      refButton.current.classList.add("active");
     };
   };
 
@@ -78,14 +79,12 @@ export default function Filter({ filters }: Props) {
   useEffect(() => {
     console.log(data);
 
-    if (refButton.current !== null && data["brand"][0].isChecked) {
-      refButton.current.classList.add("active");
-    }
+    
   }, [data]);
 
   return (
     <div className="filter" ref={refFilter}>
-      <div className="filter-apply posAbs" ref={refButton}>
+      <div className={`filter-apply posAbs`} ref={refButton}>
         Применить
       </div>
       <div className="filter__title">
@@ -102,8 +101,8 @@ export default function Filter({ filters }: Props) {
       {filters.map((filter) =>
         filter.type === "checkbox" ? (
           <div key={filter.id} className="filter__checkboxs">
-            <div className="filter__sub-title">Бренды</div>
-            {filter.options?.map((option: any, index: any) => (
+            <div className="filter__sub-title">{filter.title}</div>
+            {filter.options?.map((option: any, index: number) => (
               <FilterCheckbox
                 key={index}
                 isChecked={data[filter.id][index].isChecked}

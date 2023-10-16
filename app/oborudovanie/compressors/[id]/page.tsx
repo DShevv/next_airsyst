@@ -2,7 +2,7 @@ import ItemPage from "@/components/ItemPage/ItemPage";
 import { title } from "process";
 import React from "react";
 
-export default function page() {
+export default function Page() {
   return (
     <ItemPage
       id="1"

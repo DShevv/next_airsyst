@@ -37,25 +37,21 @@ export default function Compressors() {
             image={image}
           />
           <AirItem
-            href="vintovye-maslosmazyvaemye-kompressory"
+            href="vintbez"
             title="Винтовые безмаслянные компрессоры сухого типа"
             image={image2}
           />
           <AirItem
-            href="vintovye-maslosmazyvaemye-kompressory"
+            href="vintwater"
             title="Винтовые безмаслянные компрессоры с водяной смазкой"
             image={image3}
           />
           <AirItem
-            href="vintovye-maslosmazyvaemye-kompressory"
+            href="disel"
             title="Передвижные дизельные компрессоры"
             image={image4}
           />
-          <AirItem
-            href="vintovye-maslosmazyvaemye-kompressory"
-            title="Поршневые компрессоры"
-            image={image5}
-          />
+          <AirItem href="piston" title="Поршневые компрессоры" image={image5} />
         </div>
         <p></p>
         <h2>Производство промышленных компрессоров</h2>

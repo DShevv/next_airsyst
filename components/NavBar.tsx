@@ -64,7 +64,7 @@ export default function NavBar() {
               Дилерам
             </Link>
           </div>
-          <a href="cart" className="shopping-cart" attr-count={cartCount}>
+          <a href="/cart" className="shopping-cart" attr-count={cartCount}>
             <Image
               width={30}
               height={25}
