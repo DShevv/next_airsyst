@@ -13,12 +13,14 @@ interface Props {
   shipment: string;
   garant: string;
   itemId: any;
+  disabled?: boolean;
 }
 
 export default function ItemActions({
   price,
   shipment,
   garant,
+  disabled,
   itemId,
 }: Props) {
   const [count, setCount] = useState(1);
@@ -84,8 +86,14 @@ export default function ItemActions({
           Гарантия <span>{garant} месяцев</span>
         </div>
       </div>
-      <div className="btn to-shopping-cart" onClick={() => addToStore()}>
-        <Image alt="" src={basket} width={30} height={23} />В корзину
+      <div
+        className={`btn to-shopping-cart ${disabled ? "btn-disabled" : ""}`}
+        onClick={() => {
+          !disabled && addToStore();
+        }}
+      >
+        <Image alt="" src={basket} width={30} height={23} />
+        {disabled ? "Под заказ" : "В корзину"}
       </div>
     </div>
   );

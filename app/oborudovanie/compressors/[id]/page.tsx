@@ -20,6 +20,7 @@ export default function Page(props: any) {
           shipment: "1",
           garant: "60",
           images: [product.image],
+          disabled: product.disabled,
         }}
         description={`
                     <p><strong>Винтовые компрессоры серии AS-4TC</strong>&nbsp;предназначены для производства сжатого воздуха для небольших предприятий малого и среднего бизнеса, с потребностью до 6,5 кубов сжатого воздуха.</p>

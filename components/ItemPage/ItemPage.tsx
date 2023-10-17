@@ -12,6 +12,7 @@ interface Props {
     shipment: string;
     garant: string;
     images: string[];
+    disabled?: boolean;
   };
   description: string;
   characteristics: { title: string; value: string }[];
@@ -35,6 +36,7 @@ export default function ItemPage({
             price={mainInfo.price}
             shipment={mainInfo.shipment}
             garant={mainInfo.garant}
+            disabled={mainInfo.disabled}
           />
         </div>
       </div>

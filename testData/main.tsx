@@ -8,7 +8,19 @@ import ventbez from "./vintbez";
 import vinwater from "./vintwater";
 import voz from "./voz";
 
-const data = [
+interface IData {
+  id: string;
+  title: string;
+  price: string;
+  art: string;
+  image: string;
+  link: string;
+  weight: number;
+  disabled?: boolean;
+}
+
+const data: IData[] = [
+  ...voz,
   ...bosters,
   ...coal,
   ...disel,
@@ -17,7 +29,6 @@ const data = [
   ...ventbez,
   ...ventbez,
   ...res,
-  ...voz,
   ...vinwater,
 ];
 
