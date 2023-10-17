@@ -2,6 +2,10 @@ import ItemPage from "@/components/ItemPage/ItemPage";
 import React from "react";
 import data from "@/testData/main";
 
+export const generateStaticParams = async () => {
+  return data.map((elem) => ({ id: elem.id }));
+};
+
 export default function Page(props: any) {
   const product = data.find((item) => item.id === props.params.id);
 
