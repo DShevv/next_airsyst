@@ -4823,7 +4823,7 @@ iframe {
 
 .certificate-slide {
   position: relative;
-  transform: scale(0.9) !important;
+  transform: scale(0.7) !important;
   background: #f6f7fc;
   border-radius: 2px;
   padding: 10px;
@@ -4838,7 +4838,7 @@ iframe {
 }
 
 .certificate-slide.swiper-slide-active {
-  transform: scale(1) !important;
+  transform: scale(0.8) !important;
 }
 
 .reviews .swiper-button-prev {

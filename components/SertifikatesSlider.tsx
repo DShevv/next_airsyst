@@ -12,86 +12,57 @@ import soot from "@/public/img/images/ссоответствия Сертифи�
 import tp478 from "@/public/img/images/1060478_ДС_ТР_ЕАЭС_N_RU_Д-CN.ГА05.В.1078319.jpg";
 import Image from "next/image";
 import Link from "next/link";
+import { useFetch } from "@/hooks/useFetch";
+
+interface ICerf {
+  title: string;
+  image_url: string;
+}
 
 export default function SertifikatesSlider() {
+  const { data } = useFetch<ICerf[]>({ endpoint: "certificates/list" });
+
   return (
-    <Swiper
-      slidesPerView={3}
-      spaceBetween={30}
-      centeredSlides={true}
-      loop={true}
-      navigation={true}
-      modules={[Navigation]}
-      className="certificate-swiper"
-      breakpoints={{
-        300: { slidesPerView: 1 },
-        640: { slidesPerView: 3 },
-      }}
-    >
-      <SwiperSlide className="certificate-slide">
-        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
-          <Image src={tp480} alt="сертификат" height={470} width={332} />
-          <div className="certificate-slide__title">
-            1060480_ДС ТР ЕАЭС N RU Д-CN.ГА05.В.1082719
-          </div>
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide className="certificate-slide">
-        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
-          <Image src={tpts} alt="сертификат" height={470} width={332} />
-          <div className="certificate-slide__title">
-            ТР ТС генераторы азота и кислорода
-          </div>
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide className="certificate-slide">
-        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
-          <Image src={comp} alt="сертификат" height={470} width={332} />
-          <div className="certificate-slide__title">
-            Компрессоры AIRSYST ТР ТС
-          </div>
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide className="certificate-slide">
-        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
-          <Image src={direl} alt="сертификат" height={470} width={332} />
-          <div className="certificate-slide__title">
-            Дизельные компрессоры AIRSYST ТР ТС
-          </div>
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide className="certificate-slide">
-        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
-          <Image src={filters} alt="сертификат" height={470} width={332} />
-          <div className="certificate-slide__title">
-            Сертификат ТР ТС 10 фильтры
-          </div>
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide className="certificate-slide">
-        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
-          <Image src={refrs} alt="сертификат" height={470} width={332} />
-          <div className="certificate-slide__title">
-            ТР ТС 04/10/20 рефрижераторные осушители
-          </div>
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide className="certificate-slide">
-        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
-          <Image src={soot} alt="сертификат" height={470} width={332} />
-          <div className="certificate-slide__title">
-            ТР ТС 032/2013 генераторы азота и кислорода
-          </div>
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide className="certificate-slide">
-        <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
-          <Image src={tp478} alt="сертификат" height={470} width={332} />
-          <div className="certificate-slide__title">
-            1060478_ДС ТР ЕАЭС N RU Д-CN.ГА05.В.1078319
-          </div>
-        </Link>
-      </SwiperSlide>
-    </Swiper>
+    data &&
+    data.length > 0 && (
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        centeredSlides={true}
+        loop={true}
+        navigation={true}
+        modules={[Navigation]}
+        className="certificate-swiper"
+        breakpoints={{
+          300: { slidesPerView: 1 },
+          640: { slidesPerView: 3 },
+        }}
+      >
+        {data.map((cerf, index) => (
+          <SwiperSlide key={index} className="certificate-slide">
+            <Link
+              href={`/?modal=true&image=https://airsyst.kz/${cerf.image_url}`}
+              scroll={false}
+            >
+              <Image
+                src={"https://airsyst.kz/" + cerf.image_url}
+                alt="сертификат"
+                height={470}
+                width={332}
+              />
+              <div className="certificate-slide__title">{cerf.title}</div>
+            </Link>
+          </SwiperSlide>
+        ))}
+        <SwiperSlide key={100} className="certificate-slide">
+          <Link href={`/?modal=true&image=${testPic.src}`} scroll={false}>
+            <Image src={tp480} alt="сертификат" height={470} width={332} />
+            <div className="certificate-slide__title">
+              1060480_ДС ТР ЕАЭС N RU Д-CN.ГА05.В.1082719
+            </div>
+          </Link>
+        </SwiperSlide>
+      </Swiper>
+    )
   );
 }

@@ -1,13 +1,21 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import oxygen from "@/public/img/images/Screenshot_2.jpg";
-import geno from "@/public/img/images/Group_199.png";
-import vozdu from "@/public/img/images/1603360871_11.png";
-import vozda from "@/public/img/images/Group_197.png";
 import Image from "next/image";
+import { useFetch } from "@/hooks/useFetch";
+
+interface ISlides {
+  title: string;
+  description: string;
+  image_url: string;
+  link_url: string;
+}
 
 export default function MainSlider() {
+  const { data, isLoading, error } = useFetch<ISlides[]>({
+    endpoint: "sliders/list",
+  });
+
   return (
     <>
       <Swiper
@@ -25,7 +33,26 @@ export default function MainSlider() {
         modules={[Pagination, Navigation, Autoplay]}
         className="hero-slider swiper"
       >
-        <SwiperSlide className="hero-slide swiper-slide">
+        {data &&
+          data.map((slide) => (
+            <SwiperSlide
+              key={slide.link_url}
+              className="hero-slide swiper-slide"
+            >
+              <h2 className="title">{slide.title}</h2>
+              <h3 className="text">{slide.description}</h3>
+              <a href={slide.link_url} className="btn">
+                Узнать больше
+              </a>
+              <Image
+                src={"https://airsyst.kz/" + slide.image_url}
+                alt=""
+                width={260}
+                height={350}
+              />
+            </SwiperSlide>
+          ))}
+        {/*  <SwiperSlide className="hero-slide swiper-slide">
           <h2 className="title">Подбор азотных и кислородных станций</h2>
           <h3 className="text">
             Опытные специалисты AIRSYS помогут Вам подобрать оптимальное решение
@@ -71,7 +98,7 @@ export default function MainSlider() {
             Узнать больше
           </a>
           <Image src={vozda} alt="" width={490} height={444} />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </>
   );

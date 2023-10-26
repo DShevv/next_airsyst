@@ -5,10 +5,13 @@ interface Props {
   href: string;
   title: string;
   image: StaticImageData;
-  companies: StaticImageData[];
+  companies: string[];
 }
 
 export default function ProductItem({ href, image, title, companies }: Props) {
+  while (companies && companies.length < 6) {
+    companies.forEach((company) => companies.push(company));
+  }
   return (
     <Link href={href} className="bid__item">
       <div className="bid__preview">
@@ -23,11 +26,18 @@ export default function ProductItem({ href, image, title, companies }: Props) {
       </div>
       <div className="bid__company">
         <div className="bid__company__items">
-          {companies.map((company, index) => {
-            return (
-              <Image key={index} src={company} alt="" height={20} width={85} />
-            );
-          })}
+          {companies &&
+            companies.map((company, index) => {
+              return (
+                <Image
+                  key={index}
+                  src={"https://airsyst.kz/" + company}
+                  alt=""
+                  height={20}
+                  width={85}
+                />
+              );
+            })}
         </div>
       </div>
     </Link>

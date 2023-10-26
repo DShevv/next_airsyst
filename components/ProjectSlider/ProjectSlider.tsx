@@ -24,9 +24,12 @@ export default function ProjectSlider({ images }: Props) {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index} className="project__slide">
-            <Link href={`/?modal=true&image=${image}`} scroll={false}>
+            <Link
+              href={`/?modal=true&image=${"https://airsyst.kz/" + image}`}
+              scroll={false}
+            >
               <Image
-                src={image}
+                src={"https://airsyst.kz/" + image}
                 alt=""
                 height={340}
                 width={273}
