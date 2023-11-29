@@ -9,6 +9,7 @@ import Contacts from "./Contacts";
 import { useEffect, useState } from "react";
 import WorkTime from "./WorkTime";
 import Email from "./Email";
+import Icon from "@/public/assets/user.svg";
 
 export default function NavBar() {
   const [isOpened, setIsOpened] = useState(false);
@@ -64,6 +65,10 @@ export default function NavBar() {
               Дилерам
             </Link>
           </div>
+          <a className="mail cab" href="/cab">
+            <Image width={25} height={19} src={Icon} alt="" />
+            <span>Личный кабинет</span>
+          </a>
           <a href="/cart" className="shopping-cart" attr-count={cartCount}>
             <Image
               width={30}

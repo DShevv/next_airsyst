@@ -1,3 +1,4 @@
+import Cab from "./Cab";
 import Contacts from "./Contacts";
 import Email from "./Email";
 import WorkTime from "./WorkTime";
@@ -13,6 +14,7 @@ export default function Header() {
         />
         <Contacts title="Отдел сервиса" phones={["+7 702 660 20 47"]} />
         <Email />
+        <Cab />
       </div>
     </header>
   );

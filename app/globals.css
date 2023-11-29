@@ -4877,6 +4877,23 @@ iframe {
   padding-inline-start: 40px;
 }
 
+nav .cab {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .header .mail {
+    display: none;
+  }
+  .header .cab {
+    display: flex;
+  }
+
+  .header .wrap {
+    padding-right: 20px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .bid.wrap {
     padding: 0;
@@ -4909,6 +4926,17 @@ iframe {
 }
 
 @media (max-width: 640px) {
+  nav .cab {
+    display: flex;
+    width: 115px;
+  }
+  .nav .logo img {
+    margin-right: 16px;
+  }
+
+  nav .cab span {
+    font-size: 10px;
+  }
   .hero-slide img {
     width: 75%;
     margin: 0 auto;
@@ -4944,5 +4972,12 @@ iframe {
   .certificate-slide img {
     width: 80%;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  nav .cab span {
+    font-size: 9px;
+    text-wrap: nowrap;
   }
 }
