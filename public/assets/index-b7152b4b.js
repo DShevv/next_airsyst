@@ -566,7 +566,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   line-height: 130.5%;
 
   @media screen and (max-width: 1169px) {
-    width: auto;
+    width: calc(100% - 60px);
     max-width: 970px;
     margin: auto;
     padding: 0 10px;
@@ -575,7 +575,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   }
 
   @media screen and (max-width: 680px) {
-    width: auto;
+    width: calc(100% - 20px);
     margin: 0 10px;
     padding: 0;
     margin-top: 27px;

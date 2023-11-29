@@ -22,7 +22,10 @@ interface IProject {
 
 export const generateStaticParams = async () => {
   const data = await fetchData<IProject[]>({ endpoint: "projects/list" });
-  return data && data.map((elem) => ({ id: elem.id.toString() }));
+  if (data) {
+    return data && data.map((elem) => ({ id: elem.id.toString() }));
+  }
+  return [];
 };
 
 export default async function ProjectPage(props: any) {
